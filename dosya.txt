@@ -1,5 +1,5 @@
-yorum,adı,puanı
-çeşitli bloglarda ince telli saçlılara şiddetle tavsiye ediliyor bu ürün. kullanan süslülerin yorumlarını merak ediyorum gerçekten bu kadar iyi mi diye.,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı
+yorum,urun_adı,puanı
+çeşitli bloglarda ince telli saçlılara şiddetle tavsiye ediliyor bu ürün. kullanan süslülerin yorumlarını merak ediyorum gerçekten bu kadar iyi mi diye.,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,5
 Bir şampuan fiyatını gerçekten hakeder mi sorusunun cevabıdır benim gözümde. 2. kutumdayım ve uzun bir süre kullanmaya devam edecek gibiyim.,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,5
 henüz ilk kutumdayım ancak çok memnunum. tabi ki saçların müthiş uzamasını yahut 10 katı hacme kavuşmasını beklemek yanlış olur ancak eski mısır püskülü saçlarımdan çok daha hacimli ve parlak saçlarım var ben bunu bu şampuana ve saç kremine bağlıyorum.30 liraya alınabilecek güzel bir şampuandır.,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,5
 Kullanmakta olduğum şampuandır. Çok uzun bir zamandır saçlarımı uzatmaya çalışıyorum. 4-5 sene önceki malum kısa saç modasından ben de nasibimi almıştım çünkü. Çok çok uzun bir zaman olmadı kullanmaya başlayalı sanırsam 1 ay kadar oldu ancak saçlarımın sanki biraz daha hızlı uzadığını farkettim. Zaten saçlarım dökülüyor ama biraz daha fazla dökülmeye başladı kullanmaya başladığımdan beri. Bendeki en belirgin özelliği ise saçlarımın yağlanmasını acayip derecede geciktiriyor. Yani tabii ki yağlanıyor ama bizi koşarak banyo yapmak zorunda bırakan o yağlı görünümün oluşmasını bende baya geciktirdi. 2 gün dayanan saçlarım artık 4 gün rahat dayanıyor. Sanırım en çok bu özelliğini sevdim.,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,3
@@ -11,7 +11,7 @@ ince telli saçlara hacim vaad eden şampuandır. daha önce avalon biotin şamp
 saçlarımı hiçbir şekilde yıpratmayan parlak ve canlı bir görünüme kavuşturan verdiği hacimle dalgalarımı gözle görülür bir biçimde insancıl hale getiren şampuan.ilk kutumu bitirmek üzereyim. ince telli ve mısır püskülü saçlarıma çok iyi geldi. saçlarım yumuşacık oldu ve hiç karışmayıp kolayca taranıyorlar.fiyatını hak ettiğini düşündüğüm bir şampuan bittiğinde indirimi bile beklemeden koşa koşa alırım.,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,5
 Ürünün  dolgunlaştırıcı özelliği yanında onarıcı bir özelliği de var. Benim saçım ince telli taranması da şekil vermesi de pek kolay değil ama biotin collagen ile harika bir sonuç aldım ve almaya devam ediyorum.,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,5
 Bu şampuan gerçekten saçlarımı dolgunlaştırıyor hatta öyle hale geldi ki çok dolgunlaştı ben de kullanmıyorum artık zaten dalgalı bir saçım var kraliçeye dönmek istemedim doğrusu. Çok ince telli ve düz saçların kullanmasını öneririm. Üründe sorun yok benim seçimim yanlış.,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,4
-ilk başlarda memnunum sandım ama saçlarımı çok sertleştirdi dolgunlaştırmadı kuruttu memnun kalmadım bırakınca doğru karar verdiğimi anladım,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,3
+ilk başlarda memnunum sandım ama saçlarımı çok sertleştirdi dolgunlaştırmadı kuruttu memnun kalmadım bırakınca doğru karar verdiğimi anladım,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,1
 Şampuan gerçekten güzel saç uzatıcı ve dolgunlaştırıcı etkisi var memnunum tek bir sorun var yeni yıkayıp kuruttugumda bile bi yıkanmamış rahatsızlığı veriyor ve saçımı ertesi gün yine yıkamak zorunda oluyorum yaz için sorun yok ama çabuk yaglandırması kışın sorun olabiliyor,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,3
 herkesin saç tipi farklıdır bende güzel etki göstermedi faydasını görmedim saçımı çok sert yaptı saçları aşırı kurutuyor,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,1
 saçlarımı daha dolgun gösterdi hafif de dalgalı yapıyor ben beğendim.,OGX Dolgunlaştırıcı Biotin&Kolejen Şampuanı,4
@@ -389,4 +389,3 @@ Kokusu harikaa,pantene saç bakım kremi,5
 Yumuşacık yapıyor saçları,pantene saç bakım kremi,5
 paketleme gayet iyi,pantene saç bakım kremi,5
 Paketleme iyi,pantene saç bakım kremi,4
-
