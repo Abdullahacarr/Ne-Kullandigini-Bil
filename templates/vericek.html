@@ -1,0 +1,66 @@
+{%  extends 'base.html' %} 
+{% load static %}
+{% block content %}
+  <!-- Post Content -->
+  
+  
+  <header class="masthead" style="background-image: url('{% static "img/home-bg.jpg" %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h3>NE KULLANDIĞINI BİL</h3>
+            <span class="subheading"> ALMADAN DEĞERLENDİR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    
+      <!-- Main Content -->
+      <div class="container">
+          <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-preview">
+                    <form action="{% url 'vericek' %}", method="POST">
+                        {% csrf_token %}
+                        <div class="col-sm-12">
+                          <div class="form-group">
+                            <label>ÜRÜN ADINI GİRİNİZ</label>
+                            <select class="form-control select2" id="urunad" name="urunad"  style = "width: 100%;" required>
+                              {% for urunad in urunad %}
+                                <option value="{{ urunad }}">{{ urunad }}</option>
+                              {% endfor %}
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-sm-8">LİNKİ GİRİNİZ</div>
+                        <div class="col-sm-12">
+                          <input type="text"  class="form-control" name="web_link">
+                        </div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-12">
+                          <input type="submit" class="btn btn-primary form-control" name="submit" value="Yorumları Çek">
+                        </div>
+                            
+                            <br><br>
+                        <!-- output -->
+                    </form>
+                        <div class="output" >
+                            {% for a in icerik %}
+                            <h5>{{ a }}</h5>
+                            <br>
+                            {% endfor %}
+                            {% if a == null %}
+                            
+                            {% endif %}
+                           
+                        
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+      <hr>
+{% endblock content %}

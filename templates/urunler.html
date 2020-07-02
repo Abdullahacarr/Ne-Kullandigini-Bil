@@ -1,0 +1,42 @@
+{%  extends 'base.html' %} 
+{% load static %}
+{% block content %}
+  <!-- Post Content -->
+  
+  
+  <header class="masthead" style="background-image: url('{% static "img/home-bg.jpg" %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h3>NE KULLANDIĞINI BİL</h3>
+            <span class="subheading"> ALMADAN DEĞERLENDİR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    
+      <!-- Main Content -->
+      <div class="container">
+          <div class="col-lg-8 col-md-10 mx-auto">
+                
+                  {% for post in object_list %}
+                  <div class="post-preview">
+                    <a href=" {%  url 'post' post.pk %} ">
+                      <h2 class="post-title">
+                        {{ post.adi }}
+                      </h2>
+                    </a>
+                    
+                  </div>
+                  <hr>
+                  {% endfor %}
+                    
+                
+            </div>
+        </div>
+    
+      <hr>
+{% endblock content %}

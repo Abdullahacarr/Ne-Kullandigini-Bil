@@ -1,0 +1,75 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- Page Header -->
+  <header class="masthead" style="background-image: url('{% static "img/home-bg.jpg" %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h3>NE KULLANDIĞINI BİL</h3>
+            <span class="subheading"> ALMADAN DEĞERLENDİR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        {% for post in object_list %}
+        <div class="post-preview">
+          <a href=" {%  url 'post' post.pk %} ">
+            <h2 class="post-title">
+              {{ post.adi }}
+            </h2>
+          </a>
+          
+        </div>
+        <hr>
+        {% endfor %}
+        
+       
+        <!-- Pager -->
+        <div class="clearfix">
+          {% if is_paginated %}
+          
+            {% if page_obj.number == 1 %}
+              <a class="btn btn-outline-info float-right" href="?page=2">&rarr;</a>
+            {% endif%}  
+
+            {% if page_obj.has_previous %}
+              <a class="btn btn-outline-info " href="/">&laquo;</a>
+              <a class="btn btn-outline-info " href="?page={{ page_obj.previous_page_number }}">&lsaquo;</a>
+            {% endif%}  
+
+            {% for num in page_obj.paginator.page_range %}
+              {% if page_obj.number == num and page_obj.number != 1%}
+                <a class="btn btn-outline-info " href="?page={{ num }}"> {{ num }}</a>
+              {% endif%}  
+            {% endfor %}
+
+            {% if page_obj.has_next and page_obj.number != 1%}
+              <a class="btn btn-outline-info " href="?page={{ page_obj.next_page_number }}">&rsaquo;</a>
+              <a class="btn btn-outline-info " href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a>
+            {% endif%}  
+
+          {% endif%}
+
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  {% endblock content %}
+  <!-- Footer -->
+ 

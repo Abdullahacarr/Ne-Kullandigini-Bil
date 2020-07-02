@@ -1,0 +1,40 @@
+{%  extends 'base.html' %} 
+{% block content %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>{{ urun.adi }}</h1>
+            <span class="meta">Ortalama Puan :   
+              {{ ortalamapuan }}
+             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          
+          <p><b>Yorumlar</b></p>
+          {% for post in icerik %}
+          
+            <a href=" {%  url 'post' post.pk %} ">
+              <p>{{ post.yorum }}</p>
+            </a>
+            <p>Puan : {{ post.puan }}</p>
+           
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </article>
+
+{% endblock content %}
