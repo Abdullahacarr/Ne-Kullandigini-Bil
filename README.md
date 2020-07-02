@@ -7,3 +7,5 @@ Kozmetirk ürünlerinin bir çok siteden yorumları çekilip o ürünün nasıl 
 - Anaconda 
 - Jupyter
 - Python
+- Django
+
