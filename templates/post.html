@@ -1,7 +1,10 @@
 {%  extends 'base.html' %} 
+{% load static %}
 {% block content %}
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+  
+  <header class="masthead" style="background-image: url('{% static "img/home.jpg" %}')">
+    
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -15,26 +18,134 @@
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+      $(document).ready(function(){
+        $("#flip").click(function(){
+          $("#panel").slideToggle("slow");
+        });
+      });
+      $(document).ready(function(){
+        $("#flp").click(function(){
+          $("#pnl").slideToggle("slow");
+        });
+      });
+      </script>
+      <style> 
+      #panel, #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+      }
+      
+      #panel {
+        padding: 50px;
+        display: none;
+      }
+      #pnl, #flp {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+      }
+      
+      #pnl {
+        padding: 50px;
+        display: none;
+      }
+      </style>
   </header>
 
   <!-- Post Content -->
   <article>
-    <div class="container">
+
+    
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          
-          <p><b>Yorumlar</b></p>
-          {% for post in icerik %}
-          
-            <a href=" {%  url 'post' post.pk %} ">
-              <p>{{ post.yorum }}</p>
-            </a>
-            <p>Puan : {{ post.puan }}</p>
-           
-          {% endfor %}
+        <div class="col-lg-8 col-md-8  mx-auto">
+          <h3>Ne Kullandığını Bil Değerlendirmesi</h3>
+            <div id="container" style="width: 50%;">
+            <canvas id="pie-chart"></canvas>
+            </div>
+            <div >
+              <table>
+                <tr>
+                  <td>Bu ürün {{ toplam }} yorumda</td>
+                </tr>
+                <tr>
+                  {%for a  in say %}
+                  <td>{{a}} kişi tarafından</td>
+                  {% endfor %}
+                </tr>
+                <tr>
+                  {%for a  in etiket %}
+                  <td>
+                    kişi tarafından {{ a.etiket1 }} değerlendirmesi yapılmıştır.<br>
+                  </td>{% endfor %}
+                </tr>
+              </table>
+              
+              </div>
+        </div>
+      </div>
+    
+    <div id="flip">Etiketleri İçinde Bulunduran Yorumlar</div>
+      <div id="panel">
+          <div class="row">
+            <div class="col-lg-12 col-md-10 mx-auto">  
+             
+              {% for post in hedef %}
+                <a href=" {%  url 'post' post.pk %} ">
+                <p>{{ post.yorum }}</p></a>
+                <p>Puan : {{ post.puan }}</p>
+            
+              {% endfor %}
+          </div>
         </div>
       </div>
     </div>
+
+    <div id="flp">Tüm Yorumlar</div>
+      <div id="pnl">
+          <div class="row">
+            <div class="col-lg-12 col-md-10 mx-auto">  
+              
+              {% for post in icerik %}
+                <a href=" {%  url 'post' post.pk %} ">
+                <p>{{ post.yorum }}</p></a>
+                <p>Puan : {{ post.puan }}</p>
+            
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+          
   </article>
 
-{% endblock content %}
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script>
+    var config = {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: {{ data|safe }},
+          backgroundColor: [
+            '#ff0000', '#0000ff', '#ff0080', '#73ffff', '#5c26ff', '#002db3', '#ffff26', '#4cff4c', '#ff00ff'
+          ],
+          label: 'Population'
+        }],
+        labels: {{ labels|safe }}
+      },
+      options: {
+        responsive: true
+      }
+    };
+  
+    window.onload = function() {
+      var ctx = document.getElementById('pie-chart').getContext('2d');
+      window.myPie = new Chart(ctx, config);
+    };
+  </script>
+  {% endblock content %}
